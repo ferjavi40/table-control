@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SalaMesasComponent } from './control/pages/sala-mesas/sala-mesas.component';
 import { SalaListadoComponent } from './control/pages/sala-listado/sala-listado.component';
+import { ControlModule } from './control/control.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { SalaListadoComponent } from './control/pages/sala-listado/sala-listado.
     SalaListadoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ControlModule
   ],
   providers: [],
   bootstrap: [AppComponent]
