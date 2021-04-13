@@ -5,6 +5,9 @@ import { SalaListadoComponent } from './pages/sala-listado/sala-listado.componen
 import { SalaMesasComponent } from './pages/sala-mesas/sala-mesas.component';
 import { HomeComponent } from './pages/home/home.component';
 
+import { AppRoutingModule } from '../app-routing.module';
+
+
 
 
 @NgModule({
@@ -14,7 +17,8 @@ import { HomeComponent } from './pages/home/home.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     SalaListadoComponent,
