@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { SalaMesasComponent } from './control/pages/sala-mesas/sala-mesas.component';
@@ -14,7 +16,8 @@ import { ControlModule } from './control/control.module';
   ],
   imports: [
     BrowserModule,
-    ControlModule
+    ControlModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

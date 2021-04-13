@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -8,7 +9,19 @@ import { environment } from '../../../environments/environment';
 })
 export class MesasService {
 
-  apiUrl: string = environment.apiUrl;
+  apiUrlMesas: string = `${environment.apiUrl}tables.json`;
+  mesas: any[] = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    this.cargarMesas()
+  }
+
+
+  private cargarMesas() {
+    this.http.get(this.apiUrlMesas)
+      .subscribe((resp: any[]) => {
+        this.mesas = resp;
+        console.log(this.mesas);
+      });
+  }
 }
