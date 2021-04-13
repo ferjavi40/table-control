@@ -21,7 +21,6 @@ export class MesasService {
     this.http.get(this.apiUrlMesas)
       .subscribe((resp: any[]) => {
         this.mesas = resp;
-        console.log(this.mesas);
       });
   }
 }

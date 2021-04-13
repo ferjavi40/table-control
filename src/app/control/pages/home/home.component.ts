@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MesasService } from '../../services/mesas.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  mesas: any[] = [];
+  constructor(private _mesaService: MesasService) {}
 
   ngOnInit(): void {
   }
+
 
 }
