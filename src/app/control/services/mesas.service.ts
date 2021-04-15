@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Restauranteinterface } from '../interfaces/restaurante.interface';
 
 
 
@@ -9,18 +11,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MesasService {
 
-  apiUrlMesas: string = `${environment.apiUrl}tables.json`;
-  mesas: any[] = [];
+  apiUrlMesas: string = environment.apiUrl;
 
   constructor(private http: HttpClient) {
-    this.cargarMesas()
+
   }
 
-
-  private cargarMesas() {
-    this.http.get(this.apiUrlMesas)
-      .subscribe((resp: any[]) => {
-        this.mesas = resp;
-      });
+  getMesas(): Observable<Restauranteinterface[]> {
+    return this.http.get<Restauranteinterface[]>(`${this.apiUrlMesas}tables.json`)
   }
+
 }

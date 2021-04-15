@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
+import {ListboxModule} from 'primeng/listbox';
 
 
 
@@ -12,7 +13,8 @@ import {MenubarModule} from 'primeng/menubar';
   ],
   exports: [
     ButtonModule,
-    MenubarModule
+    MenubarModule,
+    ListboxModule
   ]
 })
 export class PrimeModule { }
