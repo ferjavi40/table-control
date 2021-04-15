@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ControlModule } from './control/control.module';
+import { PrimeModule } from './prime-ng/prime.module';
+import { SharedModule } from './control/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ControlModule } from './control/control.module';
     ControlModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    PrimeModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

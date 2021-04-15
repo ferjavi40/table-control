@@ -6,6 +6,7 @@ import { SalaMesasComponent } from './pages/sala-mesas/sala-mesas.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import { AppRoutingModule } from '../app-routing.module';
+import { PrimeModule } from '../prime-ng/prime.module';
 
 
 
@@ -18,7 +19,8 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PrimeModule
   ],
   exports: [
     SalaListadoComponent,
