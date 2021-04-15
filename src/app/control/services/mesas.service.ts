@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Restauranteinterface } from '../interfaces/restaurante.interface';
+import { MesaInterface } from '../interfaces/restaurante.interface';
 
 
 
@@ -17,8 +17,8 @@ export class MesasService {
 
   }
 
-  getMesas(): Observable<Restauranteinterface[]> {
-    return this.http.get<Restauranteinterface[]>(`${this.apiUrlMesas}tables.json`)
+  getMesas(): Observable<MesaInterface[]> {
+    return this.http.get<MesaInterface[]>(`${this.apiUrlMesas}tables.json`)
   }
 
 }

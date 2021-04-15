@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Restauranteinterface } from '../../interfaces/restaurante.interface';
+import { MesaInterface } from '../../interfaces/restaurante.interface';
 import { MesasService } from '../../services/mesas.service';
 
 @Component({
@@ -8,13 +8,13 @@ import { MesasService } from '../../services/mesas.service';
   styleUrls: ['./sala-mesas.component.css']
 })
 export class SalaMesasComponent implements OnInit {
-  mesas: Restauranteinterface[] = [];
+  mesas: MesaInterface[] = [];
 
   constructor(private _mesaServicio: MesasService) { }
 
   ngOnInit(): void {
     this._mesaServicio.getMesas()
-      .subscribe((data:Restauranteinterface[])=>{
+      .subscribe((data:MesaInterface[])=>{
         this.mesas = data;
         console.log(this.mesas);
       });

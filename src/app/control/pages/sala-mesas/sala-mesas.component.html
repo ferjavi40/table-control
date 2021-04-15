@@ -1,29 +1,6 @@
 
-<div class="container">
-    <div class="p-grid">
-        <div class="p-col-4">
-            <div>
-                mesa 1
-            </div>
-        </div>
-        <div class="p-col-4">
-            <div>mesa 2</div>
-        </div>
-        <div class="p-col-4">
-            <div>mesa 3</div>
-        </div>
-    </div>
-    <div class="p-grid">
-        <div class="p-col-4">
-            <div>
-                mesa 4
-            </div>
-        </div>
-        <div class="p-col-4">
-            <div>mesa 5</div>
-        </div>
-        <div class="p-col-4">
-            <div>mesa 6</div>
-        </div>
+<div *ngFor="let mesa of mesas" class="p-grid">
+    <div class="p-col-4">
+        {{mesa?.name_table}}
     </div>
 </div>
