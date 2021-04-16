@@ -21,14 +21,14 @@ export class SalaMesasComponent implements OnInit {
     this._mesaServicio.getMesas()
       .subscribe((data: MesaInterface[]) => {
         this.mesas = data;
-        console.log(this.mesas);
+        console.log('Estas son las mesas',this.mesas);
       });
 
 
     this._mesaServicio.getPisos()
       .subscribe((data: FloorInterface) => {
         this.pisos = data;
-        console.log('Estos son los pisos ',this.pisos['202']);
+        console.log('Estos son los pisos ',this.pisos);
       });
 
     this._mesaServicio.getZonas()

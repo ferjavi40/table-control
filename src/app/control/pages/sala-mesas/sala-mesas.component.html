@@ -1,26 +1,8 @@
-<div class="container bg-dark text-white">
-    <div class="row" *ngFor="let mesa of mesas">
-        <div class="col">
+<div class="container mt-5 text-center">
+    <div class="row">
+        <div *ngFor="let piso of pisos | ObjToArray"  class="col-sm">
+            <h3>{{piso.id_floor}}</h3>
+            <button type="button" class="btn btn-info">Ver zonas de planta</button>
         </div>
-    </div>
-</div>
-
-<div class="container">
-    <div>
-        {{mesas|json}}
-    </div>
-</div>
-<hr>
-
-<div class="container">
-    <div>
-        {{pisos|json}}
-    </div>
-</div>
-<hr>
-
-<div class="container">
-    <div>
-        {{zonas|json}}
     </div>
 </div>

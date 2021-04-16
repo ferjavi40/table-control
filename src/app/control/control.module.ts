@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { AppRoutingModule } from '../app-routing.module';
 import { PrimeModule } from '../prime-ng/prime.module';
+import { ArregloPipe } from './pipes/arreglo.pipe';
 
 
 
@@ -15,7 +16,8 @@ import { PrimeModule } from '../prime-ng/prime.module';
   declarations: [
     SalaListadoComponent,
     SalaMesasComponent,
-    HomeComponent
+    HomeComponent,
+    ArregloPipe
   ],
   imports: [
     CommonModule,
