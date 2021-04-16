@@ -38,4 +38,9 @@ export class SalaMesasComponent implements OnInit {
       })
   }
 
+
+  VerZonas(){
+    console.log('Haz dado click');
+  }
+
 }

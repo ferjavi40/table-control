@@ -1,8 +1,9 @@
 <div class="container mt-5 text-center">
     <div class="row">
         <div *ngFor="let piso of pisos | ObjToArray"  class="col-sm">
+            <small>Planta:</small>
             <h3>{{piso.id_floor}}</h3>
-            <button type="button" class="btn btn-info">Ver zonas de planta</button>
+            <button (click)="VerZonas()" pButton pRipple type="button" label="Ver zonas de planta" class="p-button-rounded p-button-success"></button>
         </div>
     </div>
 </div>
